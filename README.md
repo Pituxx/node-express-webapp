@@ -78,7 +78,11 @@ npm run dev
 Servidor disponible en:
 http://localhost:3000
 
+```
+---
+# 📍 Rutas
 | Método | Ruta      | Descripción         |
 | ------ | --------- | ------------------- |
 | GET    | `/`       | Página principal    |
 | GET    | `/status` | Estado del servidor |
+
