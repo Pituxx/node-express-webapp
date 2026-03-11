@@ -9,6 +9,10 @@ const PORT = process.env.PORT || 3000
 
 const mainRoutes = require('./routes/mainRoutes')
 
+const logger = require('./middlewares/logger')
+
+app.use(logger)
+
 app.use(express.static(path.join(__dirname, 'public')))
 
 app.use('/', mainRoutes)
