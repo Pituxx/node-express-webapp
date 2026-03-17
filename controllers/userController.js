@@ -1,3 +1,5 @@
+const User = require('../models/User')
+
 exports.getUsers = async (req, res) => {
  try {
   const users = await User.findAll()
@@ -17,7 +19,6 @@ exports.createUser = async (req, res) => {
 }
 
 exports.updateUser = async (req, res) => {
-
  try {
 
   const user = await User.findByPk(req.params.id)
@@ -33,11 +34,9 @@ exports.updateUser = async (req, res) => {
  } catch (error) {
   res.status(500).json({ error: error.message })
  }
-
 }
 
 exports.deleteUser = async (req, res) => {
-
  try {
 
   const user = await User.findByPk(req.params.id)
@@ -53,5 +52,4 @@ exports.deleteUser = async (req, res) => {
  } catch (error) {
   res.status(500).json({ error: error.message })
  }
-
 }

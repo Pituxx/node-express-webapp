@@ -1,17 +1,33 @@
-const { Post } = require('../models')
+const Post = require('../models/Post')
 
 exports.getPosts = async (req, res) => {
 
- const posts = await Post.findAll()
+ try {
 
- res.json(posts)
+  const posts = await Post.findAll()
+
+  res.json(posts)
+
+ } catch (error) {
+
+  res.status(500).json({ error: error.message })
+
+ }
 
 }
 
 exports.createPost = async (req, res) => {
 
- const post = await Post.create(req.body)
+ try {
 
- res.json(post)
+  const post = await Post.create(req.body)
+
+  res.json(post)
+
+ } catch (error) {
+
+  res.status(500).json({ error: error.message })
+
+ }
 
 }
