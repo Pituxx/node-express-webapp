@@ -10,11 +10,17 @@ const PORT = process.env.PORT || 3000
 const sequelize = require('./config/database')
 
 const mainRoutes = require('./routes/mainRoutes')
-
 const userRoutes = require('./routes/userRoutes')
+const postRoutes = require('./routes/postRoutes')
+
 
 app.use(express.json())
 app.use('/api', userRoutes)
+app.use('/api', postRoutes)
+
+const authRoutes = require('./routes/authRoutes')
+
+app.use('/api', authRoutes)
 
 const logger = require('./middlewares/logger')
 
