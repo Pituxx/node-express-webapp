@@ -25,7 +25,7 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 app.use('/', mainRoutes)
 
-sequelize.sync()
+sequelize.sync({ force: true })
  .then(() => {
   console.log("Base de datos conectada")
  })
