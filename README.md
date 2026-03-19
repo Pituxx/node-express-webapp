@@ -218,14 +218,6 @@ Autenticación sin estado, ideal para APIs modernas.
 
 Solución estándar para manejo de archivos en Node.js.
 
----
-
-# 🚀 Estado del proyecto
-
-✔ Completo
-✔ Funcional
-✔ Listo para producción básica
-✔ Apto para portafolio
 
 ---
 
